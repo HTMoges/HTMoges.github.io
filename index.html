@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Henok Tenaw Moges | AI for Dynamical Systems </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<header class="hero">
+  <h1>Henok T. Moges</h1>
+  <p class="subtitle">AI for Dynamical Systems & Scientific Machine Learning</p>
+  <p class="affil">University of Cape Town</p>
+</header>
+
+<!-- ================= INTRO ================= -->
+<section class="intro">
+
+  <p class="mission-statement">
+    <em>"When does physical structure help learning in dynamical systems and when does it fail?"</em>
+  </p>
+
+  <p>
+    I am a Research Fellow in AI Systems at the University of Cape Town, working at the intersection 
+    of machine learning, numerical analysis, and nonlinear dynamics.
+  </p>
+
+  <p>
+    My research focuses on spatio-temporal graph neural networks (STGNNs), physics-informed machine learning, 
+    and scientific ML for predictive modelling of complex dynamical systems. I study how learning architectures 
+    interact with nonlinear instability in high-dimensional systems, with emphasis on predictability horizons, 
+    stability, and chaos.
+  </p>
+
+  <p class="hr">
+    Occasionally, I try to understand chaotic systems. They mostly ignore me :)
+  </p>
+
+</section>
+
+<!-- ================= THEMES ================= -->
+<section>
+  <h2>Research Themes</h2>
+
+  <div class="grid">
+    <div class="card">Spatio-temporal Learning</div>
+    <div class="card">Physics-informed Machine Learning</div>
+    <div class="card">Nonlinear Dynamics & Chaos</div>
+    <div class="card">Predictability in Complex Systems</div>
+    <div class="card">Scientific ML & Benchmarking</div>
+  </div>
+</section>
+
+<!-- ================= POSITION ================= -->
+<section>
+  <h2>Current Position</h2>
+
+  <div class="card">
+    <strong>Research Fellow</strong><br>
+    Artificial Intelligence Research Unit (AIRU), University of Cape Town
+  </div>
+
+  <div class="card">
+  <strong>Work Package Lead — AI & Modelling</strong><br>
+  <a href="https://www.mi-hy.eu" target="_blank" rel="noopener">
+  Mi-Hy EU Project
+  </a><br>
+  <span style="font-size: 12px; color: #666;">
+    AI-driven modelling, simulation, and digital twin design for microbial hydroponics systems
+  </span>
+  </div>
+  
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section>
+  <h2>Selected Projects</h2>
+
+  <div class="project">
+    <h3>
+      <a href="https://github.com/henokmoges/ChaosBench">ChaosBench</a>
+    </h3>
+    Benchmark for evaluating forecasting models under chaotic dynamical systems,
+    focusing on predictability limits and evaluation under instability.
+  </div>
+
+  <div class="project">
+    <h3>
+      <a href="https://github.com/henokmoges/Lite-STGNN">Lite-STGNN</a>
+    </h3>
+    Efficient spatio-temporal graph neural networks for long-term time series forecasting under resource constraints.
+  </div>
+
+  <div class="project">
+    <h3>Physics-informed STGNNs</h3>
+    Hybrid models combining physical structure with deep learning for dynamical prediction.
+  </div>
+
+</section>
+
+<!-- ================= PUBLICATIONS ================= -->
+<section>
+  <h2>Selected Publications</h2>
+
+  <ul id="pub-list">
+    <li>Loading publications...</li>
+  </ul>
+
+  <p>
+    Full list on
+    <a href="https://scholar.google.com/citations?user=2XKhiYYAAAAJ&hl=en">
+      Google Scholar
+    </a>
+  </p>
+</section>
+
+<script>
+fetch('publications.json')
+  .then(response => {
+    if (!response.ok) throw new Error("JSON not found");
+    return response.json();
+  })
+  .then(data => {
+    const list = document.getElementById('pub-list');
+    list.innerHTML = '';
+
+    data.slice(0, 5).forEach(pub => {
+      const li = document.createElement('li');
+      li.textContent = `${pub.authors} (${pub.year}). ${pub.title}.`;
+      list.appendChild(li);
+    });
+  })
+  .catch(error => {
+    document.getElementById('pub-list').innerHTML =
+      '<li>Publications unavailable.</li>';
+    console.error(error);
+  });
+</script>
+
+<!-- ================= LINKS ================= -->
+<section>
+  <h2>Links</h2>
+
+  <ul class="links-list">
+<!--     <li><a href="https://scholar.google.com/citations?user=2XKhiYYAAAAJ&hl=en">Google Scholar</a></li>-->
+    <li><a href="https://github.com/henokmoges">GitHub</a></li>
+    <li><a href="https://linkedin.com/">LinkedIn</a></li>
+    <li><a href="mailto:henok.moges@uct.ac.za">Email</a></li>
+  </ul>
+
+</section>
+
+<footer>
+  <p>© 2026 Henok T. Moges</p>
+</footer>
+
+</div>
+
+</body>
+</html>

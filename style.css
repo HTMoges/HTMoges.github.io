@@ -1,0 +1,113 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  margin: 0;
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+/* Header */
+.hero {
+  text-align: center;
+  padding: 70px 20px 30px;
+}
+
+h1 {
+  font-size: 38px;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #444;
+  margin-top: 5px;
+}
+
+.affil {
+  font-size: 15px;
+  color: #777;
+}
+
+/* Sections */
+section {
+  margin-top: 45px;
+}
+
+h2 {
+  font-size: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 6px;
+  margin-bottom: 15px;
+}
+
+/* Intro */
+.intro p {
+  line-height: 1.75;
+}
+
+/* Quote */
+.mission-statement {
+  font-style: italic;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Humor */
+.humor {
+  color: #555;
+  font-style: italic;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.card {
+  background: #f7f7f9;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* Projects */
+.project {
+  background: #fafafa;
+  border-left: 3px solid #2a5db0;
+  padding: 14px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+}
+
+.project h3 {
+  margin: 0 0 5px;
+}
+
+/* Links */
+ul {
+  padding-left: 20px;
+}
+
+a {
+  color: #2a5db0;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 12px;
+  color: #888;
+}
